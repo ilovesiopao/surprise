@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title> 🖤</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/1200x/22/54/c1/2254c12431e15cd3172a25aca1034451.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .center-container img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .caption {
+            background-color: red;
+            color: white;
+            font-size: 24px;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
+            margin-left: 0.5rem;
+        }
+        .caption::before {
+            content: "";
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-right: 20px solid red;
+        }
+        .big-button {
+            font-size: 2.5rem;
+            padding: 2rem 3rem;
+            border-radius: 20px;
+            border: none;
+            background: #e74c3c;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: opacity 0.7s, visibility 0.7s;
+            opacity: 1;
+            visibility: visible;
+        }
+        .big-button.fade {
+            opacity: 0;
+            visibility: hidden;
+        }
+        #a3 {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .my-button {
+            padding: 10px 20px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .my-button:hover {
+            background: #c0392b;
+        }
+        .center-screen {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-screen" id="buttonContainer">
+        <button id="mainButton" class="big-button" onclick="fadeAndShow()">Bro i hate you sm</button>
+    </div>
+    <div id="a3">
+        I'm joking. Ilysm!!! You're the most amazing boy i could ever ask for. Those "little things" mean so much to me. Words can't express how much I love you, so I'm trying the best I can do use words because that's literally the best i can do. My "friends" may say, "Kai, you should leave him, you deserve better." Actually, you ARE the definition of better. We may have fights and misunderstandings, but we quickly mend things up. Those times when you were there to talk to me when no one was made me feel like the most special girl in the whole entire universe. Yato, you don't know how much you actually mean to me. I'm so grateful that I've get to experience love with you.
+        <div class="center-container">
+            <img src="https://i.pinimg.com/736x/13/5c/3a/135c3add874368d0d2e6fc3ed7a5dfb3.jpg" alt="Photo">
+            <span class="caption">Us in another universe btw</span>
+            <button class="my-button" onclick="window.location.href='index2.html'">
+                DONT click here😗(you should <span style="color: red; font-weight:bold;">DEFINETLY</span> <span style="font-size:7px;">NOT</span> click it)
+            </button>
+        </div>
+    </div>
+    <script>
+        function fadeAndShow() {
+            var btn = document.getElementById('mainButton');
+            btn.classList.add('fade');
+            setTimeout(function() {
+                document.getElementById('buttonContainer').style.display = 'none';
+                document.getElementById('a3').style.display = 'block';
+            }, 700);
+        }
+    </script>
+</body>
+</html>
